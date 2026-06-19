@@ -1,0 +1,436 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navegación */
+header {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #00d2d3;
+}
+
+/* Sección Hero - Oscureciendo el fondo claro con CSS puro */
+.hero {
+    /* Cargamos un degradado gris oscuro que se fusionará sobre tu imagen original */
+    background-image: linear-gradient(rgba(40, 44, 48, 0.92), rgba(30, 32, 35, 0.95)), url('GBOT.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Este comando fusiona el degradado oscuro con tu imagen de fondo claro */
+    background-blend-mode: multiply; 
+    
+    color: white;
+    text-align: center;
+    padding: 60px 20px 50px 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75vh; 
+    box-sizing: border-box;
+}
+
+/* Título superior en blanco con alto contraste */
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: auto;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), -1px -1px 0px rgba(0, 0, 0, 0.9);
+}
+
+/* Texto de talleres con el brillo blanco (Glow) que querías para el fondo oscuro */
+.hero p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    max-width: 850px;
+    margin-top: auto; 
+    margin-bottom: 25px; 
+    color: #ffffff;
+    /* Efecto de brillo blanco intenso */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.85), 0 0 20px rgba(255, 255, 255, 0.4), 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* Botón de inscripción */
+.hero .btn-clase {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero .btn-clase:hover {
+    background-color: #e67e22;
+}
+/* --- Estilos específicos para arreglar el botón de WhatsApp --- */
+.btn-whatsapp {
+    background-color: #25D366 !important; /* Forzamos el verde oficial de WhatsApp */
+    color: white !important;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E !important; /* Verde más oscuro al pasar el cursor */
+}
+/* Botones */
+.btn {
+    background-color: #ff9f43;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #ee5253;
+}
+
+/* Secciones y Grillas */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* --- CONFIGURACIÓN GENERAL DE LA GALERÍA --- */
+.bg-alt {
+    background-color: #f0f2f5; 
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.bg-alt h2 {
+    font-size: 2.6rem;
+    color: #1a1c1e;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.subtitulo-galeria {
+    font-size: 1.2rem;
+    color: #444444;
+    margin-bottom: 40px;
+}
+
+/* Rejilla para organizar perfectamente las 3 tarjetas en una fila */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Estilo individual de las tarjetas */
+.tarjeta-proyecto {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: left; 
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    border-left: 6px solid #4a9c80; /* Tu borde verde característico */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-proyecto h3 {
+    font-size: 1.5rem;
+    color: #1a1c1e;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.tarjeta-proyecto p {
+    font-size: 1.1rem;
+    color: #666666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* --- ESTILOS DEL BOTÓN EXTRA DE TIKTOK --- */
+.contenedor-ver-mas {
+    margin-top: 50px; 
+    display: flex;
+    justify-content: center;
+}
+
+.btn-ver-mas {
+    background-color: #1a1c1e; 
+    color: #ffffff;
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-ver-mas:hover {
+    background-color: #000000;
+    transform: scale(1.05); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+/* Tarjetas */
+.tarjeta, .tarjeta-proyecto {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: left;
+}
+
+.tarjeta-proyecto {
+    border-left: 5px solid #16a085;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px);
+    background-color: #e8f8f5;
+}
+
+.tarjeta h3, .tarjeta-proyecto h3 {
+    margin-bottom: 15px;
+    color: #1a1a2e;
+}
+/* --- CONFIGURACIÓN DE LA BARRA SUPERIOR --- */
+.barra-superior {
+    display: flex;
+    justify-content: space-between; /* Empuja el logo a la izquierda y el menú a la derecha */
+    align-items: center;
+    padding: 15px 4%;
+    background-color: #1a1c1e; /* Ajusta al color oscuro de tu fondo si es necesario */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- BARRA SUPERIOR GENERAL --- */
+.barra-superior {
+    display: flex;
+    justify-content: space-between; /* Envía el botón a la izquierda y el menú a la derecha */
+    align-items: center;
+    padding: 15px 4%;
+    background-color: #1a1c1e; /* El fondo oscuro de tu barra */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- BOTÓN UNIFICADO: GBOT CONÓCENOS --- */
+.btn-gbot-conocenos {
+    background-color: #4a9c80; /* El color verde de la imagen */
+    color: #ffffff; /* Texto completamente blanco */
+    font-size: 1.4rem; /* Tamaño destacado para que se lea genial */
+    font-weight: bold;
+    text-decoration: none; /* Quita el subrayado de enlace */
+    padding: 10px 24px; /* Espaciado interno para darle forma de botón largo */
+    border-radius: 12px; /* Bordes redondeados idénticos a los de la captura */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+/* Efecto interactivo al pasar el mouse */
+.btn-gbot-conocenos:hover {
+    background-color: #3d8269; /* Un verde sutilmente más oscuro al apuntar */
+    transform: scale(1.03); /* Crece un poquito de forma elegante */
+}
+
+/* --- MENÚ DE NAVEGACIÓN (DERECHA) --- */
+.menu-navegacion {
+    display: flex;
+    gap: 25px; /* Espacio entre Proyectos, Talleres y Contacto */
+}
+
+.menu-navegacion a {
+    color: #ffffff; /* Letras blancas para el menú */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu-navegacion a:hover {
+    color: #4a9c80; /* Cambia a verde al pasar el cursor */
+}
+/* --- NUEVOS ESTILOS TALLERES DINÁMICOS --- */
+.seccion-talleres-dinamica {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.subtitulo-talleres {
+    font-size: 1.4rem;
+    color: #4a9c80; /* Tu verde insignia */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.introduccion-talleres {
+    font-size: 1.2rem;
+    color: #444444;
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+/* Contenedor en rejilla para los ganchos de atención */
+.lista-atractivos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left; /* Lectura cómoda hacia la izquierda */
+}
+
+/* Cada tarjeta/fila de beneficio */
+.item-atractivo {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #1a1c1e; /* Detalle oscuro elegante */
+}
+
+.icono-atractivo {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.item-atractivo p {
+    font-size: 1.05rem;
+    color: #555555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.item-atractivo strong {
+    color: #1a1c1e;
+    display: block; /* Pone el título del beneficio arriba del texto */
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+}
+/* --- VENTANA EMERGENTE (MODAL) PARA EL VIDEO --- */
+
+/* Fondo oscuro que cubre toda la pantalla */
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none; /* Oculto por defecto */
+    transition: opacity 0.4s ease;
+}
+
+/* Se activa automáticamente cuando el href del botón coincide con el ID */
+.modal-contenedor:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Caja blanca/oscura que contiene el video al centro */
+.modal-contenido {
+    position: relative;
+    width: 90%;
+    max-width: 800px; /* Tamaño máximo del reproductor */
+    background-color: #1a1c1e;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* El video se adapta al tamaño de la ventana */
+.reproductor-gbot {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Botón "X" para cerrar */
+.btn-cerrar-modal {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.btn-cerrar-modal:hover {
+    color: #4a9c80; /* Cambia a tu verde al pasar el mouse */
+}
+/* --- Centrar los botones de contacto --- */
+.botones-contacto {
+    display: flex;
+    justify-content: center; /* Alinea los botones exactamente al centro */
+    flex-wrap: wrap;         /* Si no caben en celular, los pone uno abajo del otro */
+    gap: 20px;               /* Separa los botones entre sí */
+    margin-top: 25px;        /* Separa los botones del texto de arriba */
+    width: 100%;
+    
+}
+/* --- Centrar los textos de la sección de contacto --- */
+#contacto, 
+.contenedor-contacto {
+    text-align: center !important; /* Alinea los títulos y párrafos al centro */
+}
