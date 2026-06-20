@@ -434,3 +434,17 @@ section {
 .contenedor-contacto {
     text-align: center !important; /* Alinea los títulos y párrafos al centro */
 }
+/* --- RESPONSIVO PARA MENÚ EN CELULARES --- */
+@media (max-width: 768px) {
+    .menu-navegacion {
+        gap: 10px; /* Reducimos el espacio a 10px para que quepan todos */
+        justify-content: center;
+        flex-wrap: wrap; /* Si el espacio es muy crítico, permite acomodarse sin cortarse */
+    }
+
+    .menu-navegacion a {
+        font-size: 0.9rem; /* Letra un poco más pequeña para pantallas móviles */
+        padding: 6px 8px;  /* Espaciado interno más compacto */
+        white-space: nowrap; /* Evita que "GBOT Conócenos" se rompa en dos líneas */
+    }
+}
